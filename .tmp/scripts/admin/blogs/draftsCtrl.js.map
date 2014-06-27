@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "draftsCtrl.js",
+  "sourceRoot": "",
+  "sources": [
+    "draftsCtrl.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,EAAA,OAAO,CAAC,MAAR,CAAe,yBAAf,EAA0C,EAA1C,CAEA,CAAC,UAFD,CAEY,YAFZ,EAE0B;IACxB,QADwB,EAExB,QAFwB,EAGxB,OAHwB,EAIxB,SAAC,MAAD,EAAS,MAAT,EAAiB,KAAjB,GAAA;aAEE,MAAM,CAAC,MAAP,GAAgB,OAFlB;IAAA,CAJwB;GAF1B,CAAA,CAAA;AAAA"
+}

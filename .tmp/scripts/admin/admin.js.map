@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "admin.js",
+  "sourceRoot": "",
+  "sources": [
+    "admin.src.coffee"
+  ],
+  "names": [],
+  "mappings": "AACA;AAAA,EAAA,OAAO,CAAC,MAAR,CAAe,eAAf,EAAgC,EAAhC,CAEA,CAAC,OAFD,CAES,cAFT,EAEyB;IAAE,SAAA,GAAA;aACzB;AAAA,QAAA,QAAA,EAAU,SAAA,GAAA,CAAV;AAAA,QACA,QAAA,EAAU,SAAA,GAAA,CADV;QADyB;IAAA,CAAF;GAFzB,CAAA,CAAA;AAAA"
+}

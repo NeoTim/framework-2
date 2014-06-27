@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "ideasCtrl.js",
+  "sourceRoot": "",
+  "sources": [
+    "ideasCtrl.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,EAAA,OAAO,CAAC,MAAR,CAAe,wBAAf,EAAyC,EAAzC,CAEA,CAAC,UAFD,CAEY,WAFZ,EAEyB;IACvB,QADuB,EAEvB,OAFuB,EAGvB,SAAC,MAAD,EAAS,KAAT,GAAA;aAEE,MAAM,CAAC,KAAP,GAAe,MAFjB;IAAA,CAHuB;GAFzB,CAAA,CAAA;AAAA"
+}

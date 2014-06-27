@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "Ideas.js",
+  "sourceRoot": "",
+  "sources": [
+    "Ideas.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,EAAA,OAAO,CAAC,MAAR,CAAe,qBAAf,EAAsC,EAAtC,CAEA,CAAC,OAFD,CAES,OAFT,EAEkB,SAAA,GAAA,CAFlB,CAAA,CAAA;AAAA"
+}

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "notifiCtrl.js",
+  "sourceRoot": "",
+  "sources": [
+    "notifiCtrl.coffee"
+  ],
+  "names": [],
+  "mappings": "AAUE;AAAA;AAAA"
+}

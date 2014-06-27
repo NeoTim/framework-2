@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "blogsCtrl.js",
+  "sourceRoot": "",
+  "sources": [
+    "blogsCtrl.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,EAAA,OAAO,CAAC,MAAR,CAAe,wBAAf,EAAyC,EAAzC,CAEA,CAAC,UAFD,CAEa,WAFb,EAE0B;IACxB,QADwB,EAExB,OAFwB,EAGxB,SAAC,MAAD,EAAS,KAAT,GAAA;AACE,MAAA,MAAM,CAAC,KAAP,GAAe,KAAf,CAAA;aACA,OAAO,CAAC,GAAR,CAAY,MAAM,CAAC,KAAnB,EAFF;IAAA,CAHwB;GAF1B,CAAA,CAAA;AAAA"
+}
