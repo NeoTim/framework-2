@@ -20,11 +20,7 @@ angular.module('app', [
   'app.fire.controllers'
   # 'app.simpleLoginTools'
   'app.routeSecurity'
-  'app.admin'
-
-
   # Custom modules
-  'app.stores'
   'app.ui.ctrls'
   'app.ui.directives'
   'app.ui.services'
@@ -116,19 +112,6 @@ angular.module('app', [
 #       $rootScope.auth = loginService.init("/login")
 #       $rootScope.FBURL = FBURL
 # ]
-
-# .run([
-#     '$rootScope'
-#     ($rootScope) ->
-
-#         $rootScope.$on('$routeChangeStart', (event, next, current) ->
-#             console.log 'routeChangeStart'
-#         )
-
-#         $rootScope.$on('$routeChangeSuccess', (event, current, previous, rejection) ->
-#             console.log 'routeChangeSuccess'
-#         )
-# ])
 
 # .run([
 #   'loginService'
