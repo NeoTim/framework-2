@@ -11,7 +11,7 @@ angular.module('app.fire.config', [])
 .constant('loginRedirectPath', '/pages/signin')
 
 # // your Firebase URL goes here
-.constant('FBURL', 'http://joelcox-io.firebaseio.com')
+.constant('FBURL', 'http://joelcox-io.firebaseio.com/chatter')
 
 
 
