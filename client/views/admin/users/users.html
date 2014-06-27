@@ -1,0 +1,62 @@
+<div ng-controller="usersCtrl">
+<div class="col-md-12">
+  <h1>Users
+    <button type="button" class="btn btn-info pull-right" ng-click="showNew = true"><i class="fa fa-plus"></i></button>
+  </h1>
+</div>
+
+<!--
+<div class="panel" ng-controller="usersCtrl">
+  <table class="table">
+
+  </table>
+</div> -->
+<div class="panel">
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width:30px">View</th>
+        <th>Last</th>
+        <th>First</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th style="width:40px">Options</th>
+      </tr>
+    </thead>
+    <tbody ng-show="showNew">
+      <td>
+        <button type="button" ng-click="showNew = false; new = ''" class="btn btn-danger"><i class="fa fa-times"></i></button>
+      </td>
+      <td>
+        <input type="text" ng-model="new.last" class="form-control" placeholder="Last name">
+      </td>
+      <td>
+        <input type="text" ng-model="new.first" class="form-control" placeholder="First name">
+      </td>
+      <td>
+        <input type="text" ng-model="new.username" class="form-control" placeholder="Username">
+      </td>
+      <td>
+        <input type="email" ng-model="new.email" class="form-control" placeholder="Email">
+      </td>
+      <td>
+        <button type="button" ng-click="createUser(new); showNew = false; new = ''" class="btn btn-info">Done</button>
+      </td>
+    </tbody>
+    <tbody>
+      <tr ng-repeat="(idx, user) in users.get()">
+        <td>
+          <a href="#/admin/users/:userid" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
+        </td>
+        <td> {{user.last}} </td>
+        <td> {{user.first}} </td>
+        <td> {{user.username}} </td>
+        <td> {{user.email}} </td>
+        <td>
+          <button type="button" ng-click="users.destroy(idx)" class="btn btn-default btn-sm"><i class="fa fa-times"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

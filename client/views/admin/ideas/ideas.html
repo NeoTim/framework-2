@@ -1,0 +1,98 @@
+<div class="page" data-ng-controller="ideasCtrl">
+
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <section class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Nested Lists</strong></div>
+                <div class="panel-body">
+                    <div ui-tree="options">
+                        <ol ui-tree-nodes ng-model="list" >
+                            <li ng-repeat="item in list" ui-tree-node ng-include="'items_renderer.html'"></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <div class="col-md-6">
+
+            <section class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Serialised Output</strong></div>
+                <div class="panel-body">
+                    <pre class="text-muted">{{list}}</pre>
+                </div>
+            </section>
+
+        </div>
+    </div>
+<!--
+<div ui-tree>
+  <ol ui-tree-nodes="" ng-model="list">
+    <li ng-repeat="item in list" ui-tree-node>
+      <div ui-tree-handle>
+        {{item.title}}
+      </div>
+      <ol ui-tree-nodes="" ng-model="item.items">
+        <li ng-repeat="subItem in item.items" ui-tree-node>
+          <div ui-tree-handle>
+            {{subItem.title}}
+          </div>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</div>
+ -->
+
+    <script type="text/ng-template" id="items_renderer.html">
+        <div class="angular-ui-tree-handle">
+            <span>{{item.items}}</span>
+        </div>
+    </script>
+
+<!--                 <span class="tree-handle" ui-tree-handle ng-click="toggle(this)">
+                  <i data-ng-hide="item.items.length > 0" class="fa fa-circle-o" ng-class="{ 'fa-cirlce-o': collapsed, 'fa-circle-o': !collapsed }"</i>
+                  <i data-ng-show="item.items.length > 0" class="fa fa-circle" ng-class="{ 'fa-circle': collapsed, 'fa-circle': !collapsed }" ng-click="toggle(this)"></i>
+                </span> -->
+
+
+    <script type="text/ng-template" id="items_renderer.html">
+      <table style="width:100%;" ng-mouseenter="showControl = true" ng-mouseleave="showControl = false">
+        <tr>
+          <td style="width:5%;">
+            <i style="margin-top:6px;" class="fa fa-minus pull-right" ui-tree-handle></i>
+          </td>
+          <td style="width:5%;">
+            <i style="margin-top:6px;" ng-click="toggle(this)" class="fa fa-circle-o pull-right" data-nodrag ng-class="{ 'fa-circle': item.items.length > 0 }" ></i>
+          </td>
+          <td style="width:80%;">
+            <input type="text" style="width:100%; padding-left:5px; border:none; outline:none;" ng-model="item.title">
+          </td>
+          <td style="width:5%;">
+            <span ng-show="showControl" style="margin-top:6px;" class="fa fa-times" data-nodrag ng-click="remove(this)"></span>
+          </td>
+          <td style="width:5%;">
+            <span ng-show="showControl" style="margin-top:6px;" class="fa fa-plus" data-nodrag ng-click="newSubItem(this)"></span>
+          </td>
+        </tr>
+      </table>
+      <ol ui-tree-nodes="options" ng-model="item.items" ng-class="{hidden: collapsed}">
+          <li ng-repeat="item in item.items" ui-tree-node ng-include="'items_renderer.html'">
+          </li>
+      </ol>
+    </script>
+
+        <!-- <div class="input-group">
+            <span class="input-group-btn">
+            </span>
+            <span class="input-group-btn">
+            </span>
+            <input type="text" class="form-control" ng-model="item.title">
+            <span class="input-group-btn">
+            </span>
+        </div> -->
+              <!-- <td style="min-width:50px; width:20%;">
+              </td> -->
+</div>

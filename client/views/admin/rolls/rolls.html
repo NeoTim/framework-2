@@ -1,0 +1,46 @@
+<div ng-controller="rollsCtrl">
+<div class="col-md-12">
+  <h1>Rolls
+    <button type="button" class="btn btn-info pull-right" ng-click="showNew = true"><i class="fa fa-plus"></i></button>
+  </h1>
+</div>
+
+<div class="panel">
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width:30px">View</th>
+        <th>Title</th>
+        <th>Type</th>
+        <th style="width:40px">Options</th>
+      </tr>
+    </thead>
+    <tbody ng-show="showNew">
+      <td>
+        <button type="button" ng-click="showNew = false; new = ''" class="btn btn-danger"><i class="fa fa-times"></i></button>
+      </td>
+      <td>
+        <input type="text" ng-model="new.title" class="form-control" placeholder="Title">
+      </td>
+      <td>
+        <input type="text" ng-model="new.type" class="form-control" placeholder="Roll Type">
+      </td>
+      <td>
+        <button type="button" ng-click="createRoll(new); showNew = false; new = ''" class="btn btn-info">Done</button>
+      </td>
+    </tbody>
+    <tbody>
+      <tr ng-repeat="(idx, roll) in rolls.get()">
+        <td>
+          <a href="#/admin/rolls/{{idx}}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
+        </td>
+        <td> {{roll.title}} </td>
+        <td> {{roll.type}} </td>
+        <td>
+          <button type="button" ng-click="rolls.destroy(idx)" class="btn btn-default btn-sm"><i class="fa fa-times"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

@@ -1,0 +1,61 @@
+<div class="page" ng-controller="draftsCtrl">
+    <div class="row">
+        <div class="col-sm-3">
+            <section class="panel panel-default mail-categories">
+                <div class="panel-heading">
+                    <a href="#/admin/blogs/create" class="btn btn-block btn-lg btn-primary">Compose</a>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#/admin/blogs">
+                        <i class="fa fa-book"></i>Blogs
+                        <!-- <span class="badge badge-info pull-right">6</span> -->
+                    </a></li>
+                    <li class="list-group-item"><a href="#/admin/blogs/notifications">
+                        <i class="fa fa-exclamation"></i>Notifications
+                    </a></li>
+                    <li class="list-group-item"><a href="#/admin/blogs/drafts">
+                        <i class="fa fa-inbox"></i>Drafts
+                        <span class="badge badge-danger pull-right">3</span>
+                    </a></li>
+                    <li class="list-group-item"><a href="#admin/blog/ideas">
+                        <i class="fa fa-comment-o"></i>Ideas
+                        <span class="badge badge-success pull-right">9</span>
+                    </a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="col-sm-9">
+            <section class="panel panel-default mail-container">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Blogs</strong></div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option1"><span>Toggle All</span></label>
+                            </th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Date</th>
+                            <th>Watch</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="(idx, blog) in drafts.get()">
+                        <tr class="mail-unread" ng-click="showBlog=!showBlog">
+                            <td><label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option1" ><span></span></label></td>
+                            <td>{{blog.title}}</td>
+                            <td>{{blog.author}}</td>
+                            <td>{{blog.createdAt  | date:'MMM dd, yyyy'}}</td>
+                            <td><i class="fa fa-star"></i></td>
+                        </tr>
+                        <tr ng-show="showBlog" class="fx-fade-up">
+                            <td></td>
+                            <td colspan="4">
+                                <span ng-bind-html="blog.body">{{blog.body}}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+</div>

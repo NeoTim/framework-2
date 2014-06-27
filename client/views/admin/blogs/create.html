@@ -1,0 +1,68 @@
+
+<div class="page" ng-controller="createBlogCtrl">
+  <div class="row">
+    <div class="col-sm-3">
+      <section class="panel panel-default mail-categories">
+        <div class="panel-heading">
+          <a href="#/admin/blogs/create" class="btn btn-block btn-lg btn-primary">Compose</a>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item"><a href="#/admin/blogs" ng-click="showBlogs = true">
+              <i class="fa fa-inbox"></i>Blogs
+              <!-- <span class="badge badge-info pull-right">6</span> -->
+          </a></li>
+          <li class="list-group-item"><a href="#/admin/blogs/notifications">
+              <i class="fa fa-envelope-o"></i>Notifications
+          </a></li>
+          <li class="list-group-item"><a href="#/admin/blogs/drafts">
+              <i class="fa fa-compose"></i>Drafts
+              <span class="badge badge-danger pull-right">3</span>
+          </a></li>
+          <li class="list-group-item"><a href="#admin/blog/ideas">
+              <i class="fa fa-comment-o"></i>Ideas
+              <span class="badge badge-success pull-right">9</span>
+          </a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="col-sm-9">
+      <section class="panel panel-default mail-container mail-compose">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Compose Mail</strong></div>
+        <div class="panel-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="mail_to" class="col-xs-2">Title</label>
+              <div class="col-xs-10">
+                <input type="text" id="mail_to" ng-model="new.title" class="form-control">
+              </div>
+            </div>
+            <!-- <div class="form-group">
+              <label for="mail_cc" class="col-xs-2">CC:</label>
+              <div class="col-xs-10">
+                  <input type="text" id="mail_cc" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mail_bcc" class="col-xs-2">BCC:</label>
+              <div class="col-xs-10">
+                <input type="text" id="mail_bcc" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mail_subject" class="col-xs-2">Subject:</label>
+              <div class="col-xs-10">
+                <input type="text" id="mail_subject" class="form-control">
+              </div>
+            </div> -->
+            <div text-angular ng-model="new.body" class="ui-editor"></div>
+          </form>
+          <div class="mail-actions">
+            <div class="btn btn-sm btn-primary" ng-click="publishBlog(new)">Publish</div>
+            <div class="btn btn-sm btn-default" ng-click="createDraft(new)">Draft</div>
+            <a href="#/admin/blogs" class="btn btn-sm btn-default" ng-click="discardBlog()">Discard</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
